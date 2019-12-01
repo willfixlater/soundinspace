@@ -1,5 +1,5 @@
 (ns soundinspace.db-spec
   (:require [cljs.spec.alpha :as s]
-            [soundinspace.routes-spec :as sroutes]))
+            [soundinspace.routes-spec :as routes.spec]))
 
-(s/def ::db (s/keys :req [::sroutes/current-path]))
+(s/def ::db (s/keys :req [::routes.spec/current-path]))

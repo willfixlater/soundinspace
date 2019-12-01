@@ -3,6 +3,7 @@
 @include pastel-gradients(header-title-gradients, color);
 
 .header-title {
+  cursor: default;
   flex-shrink: 0;
   animation: header-title-gradients 30s 3s infinite;
 }

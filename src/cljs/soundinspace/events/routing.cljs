@@ -1,8 +1,7 @@
 (ns soundinspace.events.routing
-  (:require [re-frame.core :refer [reg-event-db]]
-            [soundinspace.routes :as routes]))
+  (:require [re-frame.core :refer [reg-event-db]]))
 
-(defn set-current-path* [db [_ path params]]
-  (assoc db ::routes/current-path {:path path :params params}))
+(defn set-current-route* [db [_ id params]]
+  (assoc db :routing/current-route {:id id :params params}))
 
-(reg-event-db :routing/set-current-path set-current-path*)
+(reg-event-db :routing/set-current-route set-current-route*)

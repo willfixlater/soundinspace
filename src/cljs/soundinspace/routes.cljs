@@ -1,6 +1,8 @@
 (ns soundinspace.routes
-  (:require [secretary.core :as secretary :refer-macros [defroute]]
-            [re-frame.core :as re-frame :refer [dispatch]]))
+  (:require-macros [soundinspace.macros :refer [defroute]]))
 
-(defroute index "/" []
-  (dispatch [:routing/set-current-path :index]))
+(defonce ^:dynamic *routes* {})
+
+(defroute index "/"
+  [:p {:style {:text-align :center}}
+   "Coming Soon"])

@@ -1,1 +1,2 @@
-(ns soundinspace.subs)
+(ns soundinspace.subs
+  (:require [soundinspace.subs.routing]))

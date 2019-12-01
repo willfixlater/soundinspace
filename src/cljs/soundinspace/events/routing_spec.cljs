@@ -1,13 +1,15 @@
 (ns soundinspace.events.routing-spec
   (:require [cljs.spec.alpha :as s]
-            [cljs.spec.test.alpha :as stest]
-            [soundinspace.db-spec :as sdb]
-            [soundinspace.routes-spec :as sroutes]
+            [cljs.spec.test.alpha :as s.test]
+            [soundinspace.db-spec :as db.spec]
+            [soundinspace.routes-spec :as routes.spec]
             [soundinspace.events.routing :as routing]))
 
-(s/fdef routing/set-current-path*
-        :args (s/cat :db ::sdb/db
+(s/fdef routing/set-current-route*
+        :args (s/cat :db ::db.spec/db
                      :event-vec (s/cat :event keyword?
-                                       :path ::sroutes/path
-                                       :params (s/? ::sroutes/params)))
-        :ret ::sdb/db)
+                                       :path ::routes.spec/path
+                                       :query-params
+                                         (s/? ::routes.spec/query-params)
+                                       :fragment (s/? ::routes.spec/fragment)))
+        :ret ::db.spec/db)
