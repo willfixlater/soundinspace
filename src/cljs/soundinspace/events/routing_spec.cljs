@@ -8,8 +8,6 @@
 (s/fdef routing/set-current-route*
         :args (s/cat :db ::db.spec/db
                      :event-vec (s/cat :event keyword?
-                                       :path ::routes.spec/path
-                                       :query-params
-                                         (s/? ::routes.spec/query-params)
-                                       :fragment (s/? ::routes.spec/fragment)))
+                                       :id ::routes.spec/id
+                                       :params (s/? ::routes.spec/params)))
         :ret ::db.spec/db)

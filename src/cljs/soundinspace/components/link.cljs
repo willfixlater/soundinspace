@@ -1,13 +1,9 @@
 (ns soundinspace.components.link
-  (:require [re-frame.core :as re-frame :refer [subscribe]]))
+  (:require [re-frame.core :as re-frame :refer [subscribe]]
+            [soundinspace.routes :refer [same-route?]]))
 
-(defn- same-route?
-  [{a-id :id a-params :params}
-   {b-id :id b-params :params}]
-  (let [a-params (when-not (empty? a-params) a-params)
-        b-params (when-not (empty? b-params) b-params)]
-    (and (= a-id b-id) (= a-params b-params))))
-
+;; TODO: Infer href for internal routes by re-working route/*routes* to inlcude
+;; urls
 (defn link
   [{:as opts :keys [route-id route-params external?]}
    & body]

@@ -14,3 +14,4 @@
 ** DONE Get test build running correctly
 ** TODO Add styles with cljss (maybe, have a think)
 ** TODO Allow cider to jack in
+** TODO Throw up loading indicator for 2 - 5 seconds before showing 404
