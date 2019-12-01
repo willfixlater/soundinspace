@@ -1,0 +1,33 @@
+body {
+  color: $text-color;
+  background-color: $dark-gray;
+  font-family: $text-font;
+  font-size: $text-size;
+  letter-spacing: $text-tracking;
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    text-shadow: 0px 0px 2px $link-color;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+    
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  margin-top: 3rem;
+
+  img {
+    border-radius: 5px;
+  }
+}

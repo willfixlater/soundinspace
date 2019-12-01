@@ -1,0 +1,18 @@
+@import "../colors";
+
+.header-links {
+  display: flex;
+  margin: 0 1rem;
+}
+
+.header-links__item {
+  margin: 0 0.5rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../animations/pastel-gradients";
+
+@include pastel-gradients(header-title-gradients, color);
+
+.header-title {
+  flex-shrink: 0;
+  animation: header-title-gradients 30s 3s infinite;
+}
+

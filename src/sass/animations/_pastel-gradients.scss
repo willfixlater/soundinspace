@@ -1,0 +1,21 @@
+@import "../colors";
+
+@mixin pastel-gradients($name, $property) {
+  @keyframes #{$name} {
+    20% {
+      #{$property}: $pastel-orange;
+    }
+    40% {
+      #{$property}: $pastel-yellow;
+    }
+    60% {
+      #{$property}: $pastel-green;
+    }
+    80% {
+      #{$property}: $pastel-red;
+    }
+    100% {
+      #{$property}: $pastel-violet;
+    }
+  }
+}

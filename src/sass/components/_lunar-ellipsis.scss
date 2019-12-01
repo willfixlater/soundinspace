@@ -1,0 +1,54 @@
+@import "../colors";
+@import "../animations/pastel-gradients";
+@import "../animations/pulsating-halo";
+
+@include pastel-gradients(lunar-ellipsis-gradients, background-color);
+
+$diameter: 30px;
+
+@keyframes lunar-ellipsis-jump {
+  40% {
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@function point-animation($jump-delay) {
+  @return 3s  ease-in-out $jump-delay infinite normal lunar-ellipsis-jump
+        , 8s  linear      0s          infinite normal lunar-ellipsis-gradients
+        ;
+}
+
+.lunar-ellipsis {
+  display: flex;
+  justify-content: center;
+
+  &--full-screen { // TODO: modal style / absolute positioning ?
+    margin-top: 20%;
+  }
+  
+  &__point {
+    background-color: $pastel-violet;
+    width: $diameter;
+    height: $diameter;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 15px $white;
+    animation: point-animation(0.3s);
+
+    &:first-child {
+      margin-left: 0;
+      animation: point-animation(0s);
+    }
+
+    &:last-child {
+      margin-right: 0;
+      animation: point-animation(0.6s);
+    }
+  }
+}

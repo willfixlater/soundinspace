@@ -1,0 +1,9 @@
+public/**
+.shadow-cljs/**
+node_modules/**
+
+!public/index.html
+!public/test.html
+
+.projectile
+.nrepl-port

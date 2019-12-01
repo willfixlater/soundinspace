@@ -1,0 +1,20 @@
+/* Palette */
+
+$white: #ffffff;
+$black: #111111;
+
+$gray: #aaaaaa;
+$light-gray: lighten($gray, 15%);
+$dark-gray: darken($gray, 52%);
+
+$pastel-violet: #f1d7eb;
+$pastel-blue: #b5bed8;
+$pastel-green: #ccead5;
+$pastel-yellow: #f1efb0;
+$pastel-orange: #f1ceb0;
+$pastel-red: #f1b0b0;
+
+/* Display Values */
+
+$text-color: $light-gray;
+$link-color: $white;
