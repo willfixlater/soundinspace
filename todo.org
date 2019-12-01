@@ -1,18 +1,16 @@
 * Design and Investigation
 ** Frontend
 *** Shadow CLJS
-*** CLJSS
+*** SASS (maybe CLJSS instead)
 *** Re-frame
 *** Secretary
-
 ** Backend
 *** Ring/Compojure
-
 * First Steps
 ** DONE Get a working Shadow CLJS build.
 ** DONE Mount a reagent component on render
 ** DONE Integrate re-frame into app
 ** DONE Add routes with secretary
-** TODO Get test build running correctly
-** TODO Add styles with cljss
+** DONE Get test build running correctly
+** TODO Add styles with cljss (maybe, have a think)
 ** TODO Allow cider to jack in
